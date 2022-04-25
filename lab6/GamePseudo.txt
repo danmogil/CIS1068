@@ -1,0 +1,37 @@
+printRules {
+	PRINT RULES
+}
+
+promptNewRound {
+	ASK FOR NEXT ROUND WHILE RESPONE NOT 'y' or 'no'
+}
+
+getUserMove {
+	PRINT MOVES WITH SELECTER (correlates to moves[] indexes in main)
+	ASK FOR MOVES WHILE VALID MOVE NOT SELECTED
+	RETURN INT
+}
+
+getComputerMove {
+	RETURN RANDOM INT [0,4]
+}
+
+userWon (userMove, computerMove) {
+	RETURN TRUE IF userMove BEATS computerMove
+	ELSE RETURN FALSE
+}
+
+printGameResults (roundsPlayed, userWins){
+	FORMAT/PRINT RESULTS
+}
+
+main {
+	moves = [] OF POSSIBLE MOVES
+	
+	WHILE promptNewRound NOT 'n':
+		PLAY ROUND
+		PRINT ROUND RESULTS
+		promptNewRound()
+	
+	printGameResults()
+}

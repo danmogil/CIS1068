@@ -1,0 +1,90 @@
+body {
+   font-family: Optima, Arial, sans-serif;
+   /* font-size: small; */
+   font-size:  16
+   margin:  5px 75px 0px 100px;
+}
+
+h1 {  
+    font-family: Verdana,Arial,sans-serif;
+}
+h2, h3, h4, h5, h6 {
+    font-family: Optima,Verdana,Arial,sans-serif;
+}
+
+h1 { 
+    /* font-size: 150% */
+    font-size:  42
+}
+
+h2 { 
+     /* font-size: 130%; */
+    font-size:  36
+}
+
+h3 { 
+    /* font-size: 105%; */
+    font-size:  24
+    font-style: italic;
+}
+
+h4 { 
+     /* font-size: 130%; */
+    font-size:  21
+}
+
+h5 { 
+     /* font-size: 130%; */
+    font-size:  18
+}
+
+p {
+    font-size:  16
+}
+
+.fakequiz {
+     border-width: thin;
+     border-style: solid;
+     border-color: #000000;
+}
+
+.strike {
+     text-decoration:line-through;
+}
+
+.infive {
+     margin-left: 5%
+}
+
+#footer {
+     margin-top: 30px;
+     font-size: 75%;
+     clear:right;
+}
+
+#everything { 
+     width:800px;
+     margin-left:auto;
+     margin-right:auto;
+}
+
+.code {
+    font-family: monospace;
+}
+
+.em {
+    font-style: italic;
+}
+
+.ul {
+    text-decoration: underline;
+}
+
+blockquote {
+  font: /* 14px/22px */ normal helvetica, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+  border-left: 3px solid #ccc;
+} 

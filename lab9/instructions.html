@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://cis.temple.edu/~jfiore/2022/spring/1068/assignments/09/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+   <link type="text/css" rel="stylesheet" href="./instructions_files/style.css">
+   <title>CIS 1068 Assignment 9. Warm Up with Objects.</title>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1057.0" data-gr-ext-installed="">
+<div id="everything">
+<h1>CIS 1068 Assignment 9<br>Warm Up with Objects</h1>
+
+<p>Due: Tuesday, March 29</p>
+<p>70 points</p>
+<h2>Cars (35 points)</h2>
+<p>Implement a class <span class="code">Car</span>, which contains the fields (5 points):</p>
+<ul>
+  <li><span class="code">make</span>, e.g. Ford, Subaru, Toyota ...</li>
+  <li><span class="code">model</span>, e.g., Escape, Outback, Camry ...</li>
+  <li><span class="code">year</span></li>
+  <li><span class="code">MPG</span> miles per gallon</li>
+  <li><span class="code">milesDriven</span>, the total number of miles ever driven in this car.</li>
+  <li><span class="code">fuelCapacity</span> in gallons, i.e., the size in gallons of the fuel tank.</li>
+  <li><span class="code">fuelRemaining</span>, which represents the amount of fuel remaining in the gas tank.</li>
+</ul>
+
+<p>Implement at least the following methods within the <span class="code">Car</span> class (5 points each):</p>
+<ul>
+  <li>a constructor, which initializes each of the fields</li>
+  <li><span class="code">fillTank(double g)</span>, which adds up to <span class="code">g</span> gallons of gas to the fuel tank, but not more than the car's fuel capacity.</li>
+  <li><span class="code">drive(double m)</span>, which simulates driving <span class="code">m</span> miles in the car, adding to the total number of miles driven, and reducing the amount of gas in the car according to this car's average <span class="code">MPG</span>.</li>
+  <li><span class="code">toString( )</span>, which returns a <span class="code">String</span> representation of the car.
+  </li><li><span class="code">getFuelRemaining( )</span>, which returns the amount of fuel left in the tank.</li>
+</ul>
+
+<p>For example, we should be able to do something like the following:</p>
+<pre>    Car oldJunker = new Car("Ford", "Pinto", 1972, 17.5, 132480, 12, 8); // creates a new Car object
+    oldJunker.drive(5); // drives the Car 5 miles
+    oldJunker.fillTank(1); // put in a gallon of gas
+    System.out.println(oldJunker.getFuelRemaining()); // prints the amount of fuel left
+    System.out.println(oldJunker); // prints the attributes of the car to the screen
+</pre>
+
+<p>Write a short driver program to test your Car class with a short
+array of Cars (5 points).</p>
+
+<h2>Fractions (35 points)</h2>
+
+<p>Write a class used to represent fractions.  It should contains
+fields for numerator and denominator, and it should be able to perform
+some simple arithmetic operations.</p>
+
+<p>The fields (5 points) are:</p>
+<ul>
+  <li>numerator</li>
+  <li>denominator</li>
+</ul>
+
+<p>Implement at least the following methods:</p>
+
+<dl>
+  <di><dt class="code">public Fraction(int n, int d)</dt>
+      <dd>(5 points) Constructor that creates a Fraction with numerator and
+      denominator d. If d is 0, throw an ArithmeticException.  We haven't yet had a chance to cover exceptions in as much depth as we soon will, but this can be done simply in your method with the statement <span class="code">throw new ArithmeticException();</span></dd>
+  </di>
+
+  <di><dt class="code">public int getNum()</dt>
+    <dd>(2.5 points) Returns the value of the numerator field</dd>
+  </di>
+
+  <di><dt class="code">public int getDenom()</dt>
+    <dd>(2.5 points) Returns the value of the denominator field</dd>
+  </di>
+
+  <di><dt class="code">public void setNum(int n)</dt>
+    <dd>(2.5 points) Sets the numerator field to the value given in n</dd>
+  </di>
+
+  <di><dt class="code">public void setDenom(int d)</dt>
+    <dd>(2.5 points) Sets the denominator field to the value given in d.  If d is
+    0, throw an ArithmeticException.</dd>
+  </di>
+
+  <di><dt class="code">public Fraction add(Fraction a)</dt>
+    <dd>(5 points) Returns the fraction that is the sum of the subject of the
+    method and a. For example (new Fraction(3,4)).add(new
+    Fraction(1,4)) is 16/16 i.e 1/1 We sum the fractions a/b and c/d
+    as (a*d+b*c)/b*d then reduce.</dd>
+  </di>
+
+  <di><dt class="code">public boolean equals(Fraction a)</dt>
+    <dd>(5 points) Returns true if subject of method and argument of call are equal. Fractions a/b and c/d are equal if a*d and b*c are equal or since the fractions are normalized, if a==c and b==d.</dd></di>
+
+  <di><dt class="code">public String toString()</dt>
+    <dd>(5 points) Returns a <span class="code">String</span> representation of
+    the fraction.  For example, if the numerator is 1 and the
+    denominator is 2, the <span class="code">String</span> "1/2" is
+    returned.</dd>
+  </di>
+</dl>
+
+<p>Fractions should be stored in reduced form.  For example, 2/4, 3/6,
+4/8, etc. should all be stored as 1/2.  4/10 should be stored as 2/5.
+Use
+the <a href="https://en.wikipedia.org/wiki/Euclidean_algorithm">Euclidean
+Algorithm</a> for determining the greatest common divisor, so that you
+can store fractions in reduced form.</p>
+
+
+<p>Write a simple main driver method to test your fraction class and
+each of its methods (5 points).</p>
+
+<h2>Note about files</h2>
+
+<p>There are several possible ways to organize your files for this assignment. The simplest and recommended way would be that you have four files:</p>
+<ol>
+   <li><strong><span class="code">Car.java</span></strong> - contains a <span class="code">Car</span> class definition (i.e., what we've been calling a blueprint or a cookie cutter)</li>
+   <li><strong><span class="code">CarMain.java</span></strong> - contains your test program</li>
+   <li><strong><span class="code">Fraction.java</span></strong> - contains a <span class="code">Fraction</span> class definition</li>
+   <li><strong><span class="code">FractionMain.java</span></strong> - contains a test program</li>
+</ol>
+</div>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

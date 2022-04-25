@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://cis.temple.edu/~jfiore/2022/spring/1068/assignments/02/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+   <link type="text/css" rel="stylesheet" href="./instructions_files/style.css">
+   <title>CIS 1068 Assignment 2. Get You a Cat.</title>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1057.0" data-gr-ext-installed="">
+<div id="everything">
+<h1>CIS 1068 Assignment 2<br>Get You a Cat</h1>
+
+<p>Due: Tuesday, January 25</p>
+<p>40 points</p>
+
+<h2>Description</h2>
+
+<p>This program tests your understanding of using static methods and <span class="code">println</span> statements.  You should write a Java class called <span class="code">Song</span> that should be saved into a file called <span class="code">Song.java</span>. The program should produce as output the following song, which is a shortened version of a classic American folk song named, <a href="https://www.youtube.com/watch?v=40MEJIOAEz8">Bought Me a Cat</a>.</p>
+
+<blockquote class="code">
+Bought me a cat and the cat pleased me,<br>
+I fed my cat under yonder tree.<br>
+Cat goes fiddle-i-fee.<br>
+<br>
+Bought me a hen and the hen pleased me,<br>
+I fed my hen under yonder tree.<br>
+Hen goes chimmy-chuck, chimmy-chuck,<br>
+Cat goes fiddle-i-fee.<br>
+<br>
+Bought me a duck and the duck pleased me,<br>
+I fed my duck under yonder tree.<br>
+Duck goes quack, quack,<br>
+Hen goes chimmy-chuck, chimmy-chuck,<br>
+Cat goes fiddle-i-fee.<br>
+<br>
+Bought me a goose and the goose pleased me,<br>
+I fed my goose under yonder tree.<br>
+Goose goes hissy, hissy,<br>
+Duck goes quack, quack,<br>
+Hen goes chimmy-chuck, chimmy-chuck,<br>
+Cat goes fiddle-i-fee.<br>
+<br>
+Bought me a sheep and the sheep pleased me,<br>
+I fed my sheep under yonder tree.<br>
+Sheep goes baa, baa,<br>
+Goose goes hissy, hissy,<br>
+Duck goes quack, quack,<br>
+Hen goes chimmy-chuck, chimmy-chuck,<br>
+Cat goes fiddle-i-fee.<br>
+<br>
+<b>Bought me a pig and the pig pleased me,<br>
+I fed my pig under yonder tree.<br>
+Pig goes oink, oink,<br>
+Sheep goes baa, baa,<br>
+Goose goes hissy, hissy,<br>
+Duck goes quack, quack,<br>
+Hen goes chimmy-chuck, chimmy-chuck,<br>
+Cat goes fiddle-i-fee.<br></b>
+</blockquote>
+
+<p>The first five verses of the song (all except the final bolded "pig" verse above) must exactly reproduce the output shown above.  This includes having identical wording, spelling, spacing, punctuation, and capitalization.</p>
+
+<p>The sixth verse of your song may print any text you like.  For example, you could include the "pig" verse. You may include a blank line at the very end of the output if you'd like.</p>
+
+<h2>Stylistic Guidelines</h2>
+
+<p>One way to write this program would be to simply write a <span class="code">println</span> statement that outputs each line of the song in order.  However, such a solution would not receive full credit.  Part of the challenge of this assignment lies in recognizing the structure and redundancy of the song and improving the code using static methods.</p>
+
+<p>You should not place any <span class="code">println</span> statements in your main method.  (It is okay for main to have empty <span class="code">println</span> statements to print blank lines.)  Instead of printing in main, use static methods for two reasons:</p>
+
+<ol>
+  <li>To capture the structure of the song's six verses.
+    
+  <p>You should write static methods to capture the structure of the song.  You should, for example, have a method for each of the six verses of the song to print that verse's entire contents.</p></li>
+    
+  <li>To avoid simple redundancy in the output.</li>
+</ol>
+
+<p>You should use only one <span class="code">println</span> statement for each distinct non-blank line of the song.  For example, the following line appears several times in the output, but you should have only one <span class="code">println</span> statement in your program that prints that line of the song:</p>
+
+<blockquote class="code">Cat goes fiddle-i-fee.</blockquote>
+
+<p>However, a method that prints a single line such as the above is not useful.  Instead, you should identify groups of two or more lines that appear in multiple places in the song and create static methods that capture those groups and are called multiple times.  There is a general structural redundancy to the song that you should eliminate with your static methods.  Recall that methods can call other methods if necessary.  The key question to ask yourself is whether or not you have repeated lines of code that could be eliminated if you structured your static methods differently.  As a point of reference, our solution to this program has twelve static methods other than <span class="code">main</span> (only one of which prints a single line) and occupies 89 lines including comments and blank lines. (This does <span class="em">not</span> mean that your solution is required to be the same length.)</p>
+
+<p>You do NOT have to eliminate redundancy in lines that are similar but not identical, such as these:</p>
+  <blockquote class="code">Bought me a cat and the cat pleased me<br>
+  Bought me a dog and the dog pleased me
+  </blockquote>
+
+<p>It is not possible to avoid this partial-line redundancy using just what we have learned so far (static methods and simple <span class="code">println</span> statements), so you are not expected to eliminate it.</p>
+
+<p>Include a comment at the beginning of your program with some basic
+information and a description of the program.  The comments in your
+program should be written in your own words and not copied from this
+document. Remember that at a minimum, your comments should include
+your name and section number, the assignment number, and a very brief
+description of what the program does.</p>
+
+<p>Though we will cover Chapter 2 while you work on this assignment, please do not use Chapter 2 features such as mathematical expressions or <span class="code">for</span> loops on this program. (It will not be a common practice to prohibit you from using particular language features, but in this case, the goal of the assignment is to get practice with static methods.)</p>
+
+
+</div>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
